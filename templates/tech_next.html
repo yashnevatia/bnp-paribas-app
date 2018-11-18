@@ -1,0 +1,30 @@
+<h2>Analysis</h2>
+
+<ul>
+    <li>I used CAPM analysis for excess returns.</li>
+    <li>I essentially wanted to find daily excess returns and compare it to the news on that day or the day before</li>
+</ul>
+
+<h3>CAPM Formula </h3>
+<img src="{{url_for('static', filename='formula.png')}}" alt="">
+
+<ul>
+    <li>Alpha is average excess return over the market</li>
+    <li>I calculated daily alpha for each stock and considered the S&P 500 Tech Index as my market</li>
+    <li>I used the daily US treasury bill value as Risk Free Return.</li>
+    <li>I used the formula below, where 'r' is the correlation between the stock and the market</li>
+    <li>Where x(bar) is 'Rt - Rrf' which is daily stock return subtracted by Risk Free Return</li>
+    <li>Where y(bar) is 'Rmt - Rrf' which is daily market return subtracted by Risk Free Return</li>
+    <li>sy is standard deviation of stock and sx is standard deviation of index.</li>
+</ul>
+
+<h3>Alpha, Beta Formula </h3>
+<img src="{{url_for('static', filename='formula2.png')}}" alt="">
+
+<h3>Choose stock</h3>
+<ul>
+    <li><a href="/tech/2?ticker=MSFT">Microsoft</a></li>
+    <li><a href="/tech/2?ticker=AAPL">Apple</a></li>
+    <li><a href="/tech/2?ticker=AMZN">Amazon</a></li>
+    <li><a href="/tech/2?ticker=NVDA">Nvidia</a></li>
+</ul>

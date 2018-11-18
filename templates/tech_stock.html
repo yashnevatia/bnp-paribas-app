@@ -1,0 +1,43 @@
+<h2>{{ticker}}</h2>
+
+<ul>
+    <li>I sorted the alphas</li>
+    <li>Took out the top three and bottom three excess returns</li>
+    <li>Used google search api to pull news for that ticker on that day</li>
+    <li>My news data set was not comprehensive enough to cover the relevant news</li>
+    <li>I understand I took out returns first and then looked up the news, but the relevant google article will also explain what event caused the excess return, which then lets us rank the news based on impact</li>
+    <li>Ideally I would like to get intraday data and then analyse change in volume and volatility, for when the news was released and the immediate impact it had (with drift as well)</li>
+</ul>
+
+
+<h4>Lowest Alpha</h4>
+{% for key,value in bottom.items() %}
+    Date : {{key}}
+    Alpha : {{value['alpha']}}
+    <br>
+    News:
+    <ul>
+        {% for n in value['news_links'] %}
+            <li><a href="{{n}}">{{n}}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endfor %}
+<br>
+<h4>Highest Alpha</h4>
+{% for key,value in top.items() %}
+    Date : {{key}}
+    Return : {{value['alpha']}}
+    <br>
+    News:
+    <ul>
+        {% for n in value['news_links'] %}
+            <li><a href="{{n}}">{{n}}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endfor %}
+<br>
+
+<h2><a href="/tech">TECH</a></h2>
+<h2><a href="/">HOME</a></h2>

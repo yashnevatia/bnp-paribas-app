@@ -1,0 +1,28 @@
+<h2>
+    Next Steps
+</h2>
+<ul>
+    <li>I sort the log difference data series.</li>
+    <li>I take out the top three and bottom three changes based on value.</li>
+</ul>
+
+<h2>Top Three returns</h2>
+
+{{ df | safe }}
+
+<br>
+
+<h2>Bottom Three returns</h2>
+{{ df1 | safe }}
+
+<br>
+<ul>
+    <li>I then take out the news related to oil for each of those months</li>
+    <li>I filter them according to their tense(future)</li>
+    <li>If a stock is going down, I keep the ones with negative sentiment and when the stock has gone up I keep the ones with the positive sentiment</li>
+</ul>
+<br>
+
+<button type="button" name="button">
+    <a href="/oil/2">Results</a>
+</button>

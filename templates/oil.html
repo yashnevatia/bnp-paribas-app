@@ -1,0 +1,49 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+</head>
+<h1>OIL</h1>
+
+<ul>
+    <li>So I started with taking out the WTI oil prices.</li>
+    <li>I chose to deal with monthly data in the beginnig to make it easier for me handle the same</li>
+    <li>Click next at the bottom to move on.</li>
+</ul>
+
+<h3>Monthly WTI Oil prices from 2010 to 2017 along with its plot</h3>
+<img src="{{url_for('static', filename='oil_price.png')}}" alt="">
+<div>
+<input type='button' id='hideshow' value='Show Price Data'>
+</div>
+<div id='content' style="display:none">
+    <h3>Monthly Oil Price List</h3>
+    {{ html_data | safe }}
+</div>
+
+<h3>Then I calculated the monthly change using Log Difference</h3>
+<img src="{{url_for('static', filename='oil_diff.png')}}" alt="">
+<div>
+<input type='button' id='hideshow1' value='Show Change Data'>
+</div>
+<div id='content1' style="display:none">
+    <h3>Monthly Oil Price Diff List</h3>
+    {{ html_data1 | safe }}
+</div>
+
+<br>
+<button type="button" name="button">
+    <a href="/oil/1">Next</a>
+</button>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+    jQuery('#hideshow').click(function(event) {
+         jQuery('#content').toggle('hide');
+    });
+    jQuery('#hideshow1').click(function(event) {
+         jQuery('#content1').toggle('hide');
+    });
+});
+
+</script>

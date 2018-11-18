@@ -1,0 +1,32 @@
+
+<h4>Negative Return</h4>
+{% for key,value in mynewsbad.items() %}
+    Date : {{key}}
+    Return : {{value['return']}}
+    <br>
+    News:
+    <ul>
+        {% for n in value['news'] %}
+            <li>{{n}}</li>
+        {% endfor %}
+    </ul>
+
+{% endfor %}
+<br>
+<h4>Positive Return</h4>
+{% for key,value in mynewsgood.items() %}
+    Date : {{key}}
+    Return : {{value['return']}}
+    <br>
+    News:
+    <ul>
+        {% for n in value['news'] %}
+            <li>{{n}}</li>
+        {% endfor %}
+    </ul>
+
+{% endfor %}
+<br>
+
+<h2><a href="/tech">TECH</a></h2>
+<h2><a href="/">HOME</a></h2>
