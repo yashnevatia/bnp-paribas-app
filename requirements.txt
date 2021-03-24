@@ -24,7 +24,7 @@ python-dateutil==2.7.5
 pytz==2018.7
 Quandl==3.4.4
 requests==2.20.1
-rsa==4.0
+rsa==4.1
 search-google==1.2.1
 singledispatch==3.4.0.3
 six==1.11.0
